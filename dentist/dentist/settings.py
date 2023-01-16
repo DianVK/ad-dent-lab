@@ -121,9 +121,3 @@ EMAIL_HOST_USER = 'dkinanev@gmail.com'
 EMAIL_HOST_PASSWORD = 'thisistestpassword'
 EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = False
-
-
-
-
-
-
