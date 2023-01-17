@@ -4,6 +4,18 @@ from django.core.mail import send_mail
 def home(request):
 	return render(request,'home.html', {})
 
+def courier(request):
+	return render(request,'courier.html', {})
+
+def aligners(request):
+	return render(request,'aligners.html', {})
+
+def about(request):
+	return render(request,'about.html', {})
+
+def products(request):
+	return render(request,'products.html', {})
+
 def contact(request):
 	if request.method == "POST":
 		message_name = request.POST['message-name']

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% csrf_token %}
+
+
+{% block content %}
+
+  
+            <!-- ***** Blog Area Start ***** -->
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>Специализирани продукти</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/32.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Шина против бруксизъм</a>
+              <p>- Двуслойна шина 2мм</p>
+              <p>- мек и твърд слой</p>
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/30.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Шина против сънна апнея</a>
+              <p>- Две двуслойни шини x 2мм. + пластмасови водачи</p> 
+              <p>- мек и твърд слой</p> 
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/5.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Шина за избелване</a>
+              <p>- 1мм.</p>
+              <p>- мек слой</p>
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/5.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Шина ретайнер</a>
+              <p>- 1мм. / 1.5мм. / 2мм.</p>
+              <p>- твърд слой</p>
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/33.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Фиксиран ретайнер</a>
+              <p>- тройно усукана тел</p>
+              <p>- кръгово и плоско сечение</p>
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Blog Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+            <a href="./blog-details.html">
+              <img src="{% static 'adwebsite/img/bg-img/31.jpg' %}" alt="">
+            </a>
+            <!-- Blog Content -->
+            <div class="blog-content">
+              <a href="./blog-details.html" class="post-title">Спортна шина</a>
+              <p>- 5мм.</p>
+              <p>- трислойна</p>
+              <p>- цвят по избор</p>
+              <div class="post-meta">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Blog Area End ***** -->
+
+{% endblock %}

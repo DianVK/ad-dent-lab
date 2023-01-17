@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% csrf_token %}
+
+
+{% block content %}
+
+  <!-- Dento Pricing Table Area Start -->
+  <section class="dento-pricing-table-area section-padding-100">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h3>Алайнери</h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="dento-price-table table-responsive">
+            <table class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">План | AD Dent | Basic</th>
+                  <th scope="col">Цени</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">До 10 стъпки</th>
+                  <td>1000лв.</td>
+                </tr>
+                <table class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">План | AD Dent | Advanced</th>
+                  <th scope="col">Цени</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">До 20 стъпки</th>
+                  <td>1800лв.</td>
+                </tr>
+                <table class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">План | AD Dent | Pro</th>
+                  <th scope="col">Цени</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Неограничен брой стъпки</th>
+                  <td>2800лв.</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+  
+
+{% endblock %}
