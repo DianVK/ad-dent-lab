@@ -1,4 +1,4 @@
-AD-Dent Website with Python Django
+Click on the image to see the Website
 
 
-![AD-Dent](https://user-images.githubusercontent.com/115580585/212703822-a746226b-68cb-4ee7-af8e-df3684c50252.gif)
+[<img src="https://prikachi.net/images/2023/01/18/web39e525a34d023382.png" width="70%">](https://youtu.be/A4R6D_Vb82M "Click to see the Website")
