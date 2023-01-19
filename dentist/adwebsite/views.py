@@ -25,8 +25,8 @@ def contact(request):
 		new_message = str(message + " - " + message_email)
 		# send an email
 		send_mail(
-			new_name, # subject
-			new_message, # message
+			new_name, # email at receive -  subject
+			new_message, # email at receive - message
 			message_email, # from email
 			['addentlab23@gmail.com'], # To Email
 			)
