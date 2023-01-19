@@ -21,16 +21,17 @@ def contact(request):
 		message_name = request.POST['message-name']
 		message_email = request.POST['message-email']
 		message = request.POST['message']
-
+		new_name = str(message_name + " - " + message_email)
+		new_message = str(message + " - " + message_email)
 		# send an email
 		send_mail(
-			message_name, # subject
-			message, # message
+			new_name, # subject
+			new_message, # message
 			message_email, # from email
-			['diankinanev@abv.bg'], # To Email
+			['addentlab23@gmail.com'], # To Email
 			)
 
-		return render(request, 'contact.html', {'message_name': message_name})
+		return render(request, 'contact.html', {'message_name': message_name},)
 
 	else:
 		return render(request, 'contact.html', {})

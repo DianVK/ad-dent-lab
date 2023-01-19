@@ -1,9 +1,102 @@
-{% extends 'base.html' %}
 {% load static %}
-{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="AD Dent | Dental Laboratory">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Title -->
+  <title>AD Dent | Dental Laboratory</title>
 
-{% block content %}
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'adwebsite/img/core-img/favicon.ico' %}">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="{% static 'adwebsite/css/style.css' %}">
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dento-load"></div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <!-- Top Content -->
+          <div class="col-6 col-md-9 col-lg-8">
+            <div class="top-header-content">
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="ул. „Братя Чакрин“ 12, 1700 кв. Витоша, София"><i class="fa fa-map-marker"></i> <span>ул. „Братя Чакрин“ 12, 1700 кв. Витоша, София</span></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="addentlab23@gmail.comm"><i class="fa fa-envelope"></i> <span>addentlab23@gmail.com</span></a>
+            </div>
+          </div>
+          <!-- Top Header Social Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="top-header-social-info text-right">
+              <a href="https://www.facebook.com/addentlab" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/addentlaboratory/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+            <a class="nav-brand" href="home.html"><img src="{% static 'adwebsite/img/core-img/logo.png' %}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="home.html">Начало</a></li>
+                  <li><a href="about.html">За нас</a></li>
+                  <li><a href="aligners.html">Алайнери</a></li>
+                  <li><a href="products.html">Специализирани продукти</a></li>
+                  <li><a href="contact.html">Контакти</a></li>
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+            <a href="tel:+359894407444"><button class="btn dento-btn">Обади се</button></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
 
 
   <!-- ***** Breadcrumb Area Start ***** -->
@@ -36,7 +129,7 @@
   {% if message_name %}
     <center>
       <h2>Благодарим Ви {{ message_name }}!</h2>
-      <p>Съобщението е изпратено успешно! Ще Виотговорим скоро!</p>
+      <p>Съобщението Ви е изпратено успешно!</p>
     </center>
     <br/><br/><br/>
   {% else %}
@@ -61,25 +154,26 @@
             <h5>Тел. номер</h5>
             <p>+359 892 282 323</p>
             <h5>Email</h5>
-            <p>smtladdent@gmail.com</p>
+            <p>addentlab23@gmail.com</p>
             <h5>Facebook</h5>
             <li class="breadcrumb-item"><a href="https://www.facebook.com/addentlab"><FONT COLOR="#FFFFFF"></FONT COLOR="#FFFFFF"></i><strong><FONT COLOR="#FFFFFF"><u>AD dent lab</u></FONT COLOR="#FFFFFF"></strong></a></li>
           </div>
         </div>
 
-        <!-- Contact Form -->
+       <!-- Contact Form -->
         <div class="col-12 col-md-8">
           <div class="contact-form">
             <!-- Section Heading -->
             <div class="section-heading">
-              <h3>Пишете ни</h3>
+              <h2>Пишете ни</h2>
               <div class="line"></div>
             </div>
             <!-- Form -->
-            <form action="#" method="POST">
+            <form action="{% url 'contact' %}" method="post">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-lg-6">
-                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Вашето Име">
+                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Вашето име">
                 </div>
                 <div class="col-lg-6">
                   <input type="email" name="message-email" class="form-control mb-30" placeholder="Вашият Email">
@@ -89,6 +183,7 @@
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn dento-btn">Изпрати</button>
+                  <a href="tel:+359894407444"><button class="btn dento-btn">Обади се</button></a>
                 </div>
               </div>
             </form>
@@ -101,4 +196,110 @@
   {% endif %}
   <!-- ***** Contact Area End ***** -->
 
-  {% endblock %}
+<!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'adwebsite/img/bg-img/3.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <a href="./home.html" class="d-block mb-4"><img src="{% static 'adwebsite/img/core-img/logo_bottom.png' %}" alt=""></a>
+            <p>Dental Laboratory | Removable Prosthetic | Orthodontics</p>
+            <div class="footer-contact">
+              <p><i class="icon_pin"></i> ул. „Братя Чакрин“ 12, 1700 кв. Витоша, София</p>
+              <p><i class="icon_phone"></i> +359 89 2282 323</p>
+              <p><i class="icon_mail"></i>addentlab23@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Работно Време</h5>
+            <!-- Opening Hours -->
+            <ul class="opening-hours">
+              <li><span>Понеделник</span> <span>9:00ч.–18:00ч.</span></li>
+              <li><span>Вторник</span> <span>9:00ч.–18:00ч.</span></li>
+              <li><span>Сряда</span> <span>9:00ч.–18:00ч.</span></li>
+              <li><span>Четвъртък</span> <span>9:00ч.–18:00ч.</span></li>
+              <li><span>Петък</span> <span>9:00ч.–18:00ч.</span></li>
+              <li><span>Събота</span> <span> Почивен ден</span></li>
+              <li><span>Неделя</span> <span> Почивен ден</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Бърз достъп</h5>
+
+            <!-- Quick Links Nav -->
+            <nav>
+              <ul class="quick-links">
+                <li><a href="home.html">#Начало</a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="about.html">#За нас</a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="aligners.html">#Алайнери</a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="products.html">#Специализирани продукти</a></li>
+                <li><a href="#"> </a></li>
+                <li><a href="contact.html">#Контакти</a></li>
+                <li><a href="#"> </a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Социални мрежи</h5>
+            
+            <!-- Social Info -->
+            <div class="footer-social-info">
+              #<a href="https://www.facebook.com/addentlab" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              #<a href="https://www.instagram.com/addentlaboratory/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+              #<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              #<a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copywrite Area -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copywrite-content">
+            <p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> | AD Dent Lab | <i class="fa fa-heart-o" aria-hidden="true"> All rights reserved</i><a href="https://www.facebook.com/dian.velichkovv/" target="_blank">!</a> 
+      </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{% static 'adwebsite/js/jquery.min.js' %}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'adwebsite/js/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'adwebsite/js/bootstrap.min.js' %}"></script>
+  <!-- All js -->
+  <script src="{% static 'adwebsite/js/dento.bundle.js' %}"></script>
+  <!-- Active js -->
+  <script src="{% static 'adwebsite/js/default-assets/active.js' %}"></script>
+
+</body>
+
+</html>
