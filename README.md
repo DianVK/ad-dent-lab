@@ -1,3 +1,3 @@
 Check it out: https://addent.bg/
 
-![](https://github.com/DianVK/ad-dent-lab/blob/b575e2bcaf143080a30ebbc7c08cb2de8ed95b53/README.gif)
+![addent](https://user-images.githubusercontent.com/115580585/214544805-a3b0f043-ce4a-4872-9136-06acac89e1bc.png)
